@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PORTFOLIO</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    :root{
+      --gradient :linear-gradient(90deg,rgba(186, 71, 0, 1) 29%, rgba(242, 63, 31, 1) 72%);
+    }
+
+    body {
+       font-family: 'Poppins', sans-serif;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.136) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.095) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: -1;
+    }
+     .navbar{
+            width: 100%;
+            justify-content: end;
+            display: flex;
+        }
+        #list{
+            position: absolute;
+            width: 340px;
+            height: 70vh;
+            font-size: larger;
+            list-style: none;
+            left: 0%;
+            top: 160px;
+            transform: translateX(-100%);
+            transition: .5s;
+            padding: 10px;
+            z-index: 11111;
+            background-color: #eeeeee
+        }
+        .hamburger{
+            width: 50px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            z-index: 20;
+            border: 1px solid black;
+            color: #000000;
+            display: none;
+            background-color: #eaeaea;
+            position: relative;
+            top: 25px;
+            top: 10%;
+        }
+        
+        #list li{
+            width: 90%;
+            height: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+         #list li:hover{
+            background-color: rgb(216, 97, 0);
+            color: #eaeaea;
+            cursor: pointer;
+         }
+         #toggle{
+            margin-left: 10px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             margin: 5px;
+             box-shadow: 5px 5px 15px #eaeaea;
+             background-color: #000;
+             color: #fff;
+         }
+        
+          body{
+            padding: 0%;
+          }
+          .navbar2{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 300px;
+            padding: 20px;
+            background-color: #eaeaea;
+            border-top: 7px solid orangered;
+            position: fixed;
+            z-index: 10;
+          }
+          .navbar2 .ul{
+            display: flex;
+            gap: 300px;
+            justify-content: end;
+          }
+          .navbar2 .ul li a{
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+          }
+          .logo img{
+            width: 100px;
+            border-radius: 50%;
+          }
+          .navbar2 .ul ul{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            cursor: pointer;
+            align-items: center;
+          }
+          .btns a{
+            background-color: #fff;
+            width: 100px;
+            border: none;
+            font-weight: 500;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-shadow: 5px 5px 15px #d8d8d8;       
+            display: inline-flex;
+            align-items: center;   
+            justify-content: center;
+            font-size: 1rem;
+             text-decoration: none;
+            color: #000;
+            padding: 20px;
+            gap: 20px;
+            transition: .5s;
+          }
+           .btns{
+            display: flex;
+            gap: 20px;
+           }
+           .id{
+            background-color: #000;
+           }
+          .btns a:hover {
+          background-color: #000;
+          color: #eaeaea;
+}
+.btns button a:hover{
+   color: #eaeaea;
+}
+@media screen and (max-width:1500px) {
+  .navbar2{
+    gap: 30px;
+    width: 100%;
+
+  }
+   body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+  }
+   .btns a{
+    transition: none !important;
+   }
+}
+@media screen and (max-width:1100px) {
+  .navbar2 .ul{
+    gap: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 895px) {
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    z-index: 10; 
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+  }
+
+  .navbar2 .ul {
+    display: none;
+  }
+
+  .navbar2 {
+    justify-content: space-between;
+  }
+
+  #list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #eaeaea;
+    z-index: 9998;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.pop-up .content{
+      font-size: 50px;
+      width: 900px;
+      font-weight:500;
+      line-height: 5rem;
+      text-align: justify;
+     background:var(--gradient);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      flex-wrap: wrap;
+      font-family: 'Poppins', sans-serif;
+}
+.pop-up{
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  padding: 50px;
+}
+.bt button{
+  padding: 20px 40px;
+  border: none;
+  color: #fff;
+  background-color: rgba(242, 63, 31, 1);
+  font-size: 20px;
+  position: relative;
+}
+.bt button::before{
+  content: "";
+  width: 70%;
+  margin-left: 18px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  background-color: #000;
+  left: 0% ;
+  transform-origin: left;
+  transform: scale(0);
+  transition: transform 0.4s ease-in-out;
+}
+.bt button:hover::before{
+  transform: scale(1);
+}
+@media (max-width: 1024px) {
+  .pop-up .content {
+    width: 80%;
+    font-size: 40px;
+    line-height: 4rem;
+  }
+
+  .bt button {
+    padding: 16px 32px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pop-up {
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .pop-up .content {
+    font-size: 30px;
+    width: 100%;
+    line-height: 3.2rem;
+    text-align: left;
+  }
+
+  .bt button {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 3rem;
+  margin-top: 100px;
+}
+.job{
+  display: flex;
+  font-size: 3rem;
+  font-weight: 700;
+   background: var(--gradient);
+  -webkit-text-fill-color:transparent;
+  -webkit-background-clip: text;
+  margin-top: 40px;
+}
+.desc{
+  width: 1000px;
+  height: max-content;
+  font-size: 20px;
+   background: var(--gradient);
+  -webkit-text-fill-color:transparent;
+  -webkit-background-clip: text;
+}
+.info{
+  padding: 10px;
+}
+.job #typewriter{
+  margin-left: 20px;
+  background: var(--gradient);
+  -webkit-text-fill-color:transparent;
+  -webkit-background-clip: text;
+  width: 300px;
+  display: inline-block;
+  height: 50px;
+}
+.container .img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 5px 5px 15px #bac;
+  left: 3%;
+  background-color: #000;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.img {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+.img img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+   z-index: 1; 
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .desc {
+    width: 90%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .job {
+    font-size: 2.5rem;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .job #typewriter {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    line-height: 2.5rem;
+  }
+
+  .img {
+    width: 200px;
+    height: 200px;
+    bottom: 0%;
+  }
+
+  .img img {
+    width: 200px;
+    height: 200px;
+    bottom: 0%;
+  }
+
+  .desc {
+    font-size: 16px;
+    line-height: 1.8rem;
+  }
+
+  .job {
+    font-size: 2rem;
+  }
+
+  .job #typewriter {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .img img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .job {
+    font-size: 1.5rem;
+  }
+
+  .job #typewriter {
+    font-size: 1.5rem;
+  }
+
+  .desc {
+    font-size: 14px;
+    line-height: 1.6rem;
+  }
+}
+
+.bt button a{
+  text-decoration: none;
+  color: #eaeaea;
+}
+.skill ul {
+  padding: 0%;
+  list-style: none;
+  margin: 0%;
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  height: 400px;
+  gap: 130px;
+  justify-content: center;
+}
+
+.skill li {
+  height: 200px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 0%;
+}
+
+.skill li div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #2f2f2f;
+  border-radius: 50%;
+  margin-top: 100px;
+}
+
+.skill li div::before {
+  position: absolute;
+  left: -10%;
+  top: -10%;
+  content: "";
+  width: 120%;
+  height: 120%;
+  box-shadow: 5px 5px 15px #252525;
+  z-index: -1;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ff8b43 calc(var(--point) * 1%),
+    #ff4747 calc(var(--point) * 1%)
+  );
+}
+
+.skill li span {
+  display: block;
+  font-size: 35px;
+  color: #ececec;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.skill .tittle{
+  text-align: center;
+  font-size: 35px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.skill{
+  margin-top: 100px;
+}
+@media (max-width: 1024px) {
+  .skill ul {
+    grid-template-columns: repeat(2, 150px);
+    gap: 80px;
+  }
+
+  .skill li {
+    height: 150px;
+  }
+
+  .skill li div {
+    height: 150px;
+    margin-top: 80px;
+  }
+
+  .skill li span {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill ul {
+    grid-template-columns: repeat(2, 100px);
+    gap: 50px;
+  }
+
+  .skill li {
+    height: 100px;
+  }
+
+  .skill li div {
+    height: 100px;
+    margin-top: 40px;
+  }
+
+  .skill li span {
+    font-size: 18px;
+  }
+
+  .skill .tittle h1 {
+    font-size: 28px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+ <div class="navbar2">
+      <div class="logo">
+        <img src="images4/portfolio.png" alt="">
+      </div>
+      <div class="ul">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#skill">Skill</a></li>
+          <li><a href="">Projects</a></li>
+        </ul>
+        <div class="btns">
+          <a href="">Cv<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+</svg></a>
+          
+          <a href="" style="background-color: orange; ">Contact<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+</svg></a>
+        </div>
+      </div>
+  </div>
+    <div class="navbar">
+        <div class="dropdown">
+            <div class="hamburger">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+</svg>
+            </div>
+            </div>
+            <ul id="list">
+                 <div id="toggle">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+</svg>
+</div>
+
+                <li>Home</li>
+                <li>Skill</li>
+                <li>Projects</li>
+                <li>CV</li>
+                <li>Contact</li>
+            </ul>
+    </div>
+   <section id="home">
+    <div class="pop-up">
+        <div class="content">
+              <p>I'm a web developer who blends logic and design to build modern, responsive websites that stand out.</p>
+        </div>
+        
+        <div class="bt">
+          
+          <button><a href="#explore">Explore</a></button>
+          
+        </div>
+    </div>
+    </section>
+<section id="explore">
+     <div class="container">
+      <div class="img">
+        <img src="images3/6.png" alt="">
+      </div>
+      <div class="job">
+    <div class="static-text">Hi I'm Anas a</div>
+    <div id="typewriter" class="typewriter"></div>
+    </div>
+    <div class="desc">
+    <div class="info">
+      Hi, I'm Anas — a passionate Front-End Developer and creative UI Designer.
+      I specialize in building modern, responsive websites with clean and elegant code.
+      My focus is on creating smooth user experiences using HTML, CSS, and JavaScript.
+From wireframes to final animations, I bring design to life in the browser.
+</div>
+    </div>
+    
+  </div>
+  </section>
+<section id="skill">
+  <div class="skill">
+    <div class="tittle"><h1>Skills</h1></div>
+    <ul>
+      <li>
+        <div style="--point:95;"><span>Html</span></div>
+        
+      </li>
+      <li>
+        <div style="--point:80;"><span>Css</span></div>
+        
+      </li>
+      <li>
+        <div style="--point:70;"><span>JavaScript</span></div>
+     
+      </li>
+      <li>
+        <div style="--point:50;"><span>Laravel</span></div>
+        
+      </li>
+    </ul>
+  </div>
+  </section>
+
+     <script>
+  const list = document.getElementById('list');
+  const burger = document.querySelector('.hamburger');
+  const toggle = document.getElementById('toggle');
+  const menuItems = document.querySelectorAll('#list li');
+
+  let isOpen = false;
+
+  burger.addEventListener('click', () => {
+    if (isOpen) {
+      list.style.transform = 'translateX(-100%)';
+    } else {
+      list.style.transform = 'translateX(0)';
+    }
+    isOpen = !isOpen;
+  });
+  toggle.addEventListener('click', () => {
+    if (isOpen) {
+      list.style.transform = 'translateX(-100%)';
+    } else {
+      list.style.transform = 'translateX(0)';
+    }
+    isOpen = !isOpen;
+  });
+
+
+  const el = document.getElementById('typewriter');
+  const words = [ '{Developer}.','{FrontEnd}.','{Designer}.'];
+
+  let i=0, j=0 ,del= false;
+
+  function loop(){
+    el.textContent = words[i].slice(0, j);
+    j+= del ? -1:1;
+
+    if(!del && j === words[i].length) del++;
+    else if(del && j === 0){
+      del--;
+      i = (i + 1) % words.length;
+    }
+    setTimeout(loop, del ? 50:100);
+    
+  };
+  loop();
+  
+ 
+</script>
+
+</body>
+</html>
