@@ -552,6 +552,143 @@
   }
 }
 
+ :root {
+      --primary: #f24c3d;
+      --accent: #2f2f2f;
+      --light: #f9f9f9;
+      --dark: #222;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--primary);
+    }
+
+    header h2 {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-top: 5px;
+    }
+
+    .contact {
+      margin-top: 15px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      border-left: 5px solid var(--primary);
+      padding-left: 10px;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    .summary {
+      background-color: #fff3f0;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills span {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .timeline-item {
+      background-color: #fff;
+      border-left: 3px solid var(--primary);
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    .timeline-item h4 {
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+
+    .projects ul {
+      list-style: none;
+    }
+
+    .projects li {
+      background: #fff;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-left: 4px solid var(--primary);
+      border-radius: 5px;
+    }
+
+    .projects a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+    #cv{
+      position: relative;
+      margin-top: 300px;
+    }
+
   </style>
 </head>
 
@@ -654,6 +791,81 @@ From wireframes to final animations, I bring design to life in the browser.
       </li>
     </ul>
   </div>
+  <section id="cv">
+   <div class="container">
+    <header>
+      <h1>Anas Asif</h1>
+      <h2>Front-End Developer & UI Designer</h2>
+      <div class="contact">
+         +92-3222254214 •  muhammadanas2501f@aptechgdn.net •  github.com/muhammadmuhammad555
+      </div>
+    </header>
+
+    <section class="summary">
+      <div class="section-title">Profile Summary</div>
+      <p>
+        Creative and detail-oriented Front-End Developer with strong skills in HTML, CSS, JavaScript, and UI design.
+        I create responsive, user-friendly websites that bring designs to life. Passionate about clean code,
+        pixel-perfect layouts, and smooth user experiences.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-title">Skills</div>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Bootstrap</span>
+        <span>Responsive Design</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Experience</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Front-End Developer – Freelance</h4>
+          <p>2025 – Present</p>
+          <p>Built responsive websites for local clients using HTML/CSS/JS. Delivered modern, mobile-friendly UIs.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Intern – Aptech Learning</h4>
+          <p>2025 – 2028</p>
+          <p>Learned and practiced front-end development fundamentals. Built portfolio & projects using best practices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Education</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Aptech Learning, Karachi</h4>
+          <p>Diploma in Web Development</p>
+          <p>2025 – 2028</p>
+        </div>
+        <div class="timeline-item">
+          <h4>matric – field(Computer science)</h4>
+          <p>ABC school</p>
+          <p>2025 (Present)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="section-title">Projects</div>
+      <ul>
+        <li><a href="https://muhammadmuhammad555.github.io/portfoliome/" target="_blank">🌐 My Portfolio Website</a></li>
+        <li><a href="#"> Toy Store Website</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      &copy; 2025 Anas Asif • Designed by Anas with 
+    </footer>
+  </div>
+  </section>
   </section>
 
      <script>
@@ -683,7 +895,7 @@ From wireframes to final animations, I bring design to life in the browser.
 
 
   const el = document.getElementById('typewriter');
-  const words = [ '{Developer}.','{FrontEnd}.','{Designer}.'];
+  const words = ['{Developer}.','{FrontEnd}.','{Designer}.'];
 
   let i=0, j=0 ,del= false;
 
